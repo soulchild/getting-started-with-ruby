@@ -43,18 +43,18 @@ Assign calculated value to bar if bar is undefined:
     def foo(args)
       puts "%s %s" % [ args[:firstname], args[:lastname] ]
     end
-    foo( { :firstname => "Tobi", :lastname => "Kremer" } )
+    foo( { :firstname => "Vince", :lastname => "Noir" } )
 
     # or even shorter without braces
-    foo( :firstname => "Tobi", :lastname => "Kremer" )
+    foo( :firstname => "Howard", :lastname => "Moon" )
 
 #### Arbitrary number of parameters with the splat operator
  
     def foo(*args)
       puts args.join " | "
     end
-    foo("Tobi")
-    foo("Tobi", "Kremer")
+    foo("Bollo")
+    foo("Tony", "Harrison")
 
 Or if you don't care whether there are parameters:
     
@@ -107,16 +107,16 @@ See: [http://rubylearning.com/blog/2010/11/30/how-do-i-build-dsls-with-yield-and
 
 ### Monkey patching
 
-    class Monkey
-      def patch_me
-        puts "I'm a monkey"
+    class Gorilla
+      def say
+        puts "I gotta bad feeling about this"
       end
     end
     
     # somewhere else, we can just re-open the class and monkey-patch it
-    class Monkey
-      def patch_me
-        puts "I'm a patched monkey"
+    class Gorilla
+      def say
+        puts "I dj at fabric"
       end
     end
  
